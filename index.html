@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="أكاديمية غيث لتحفيظ القرآن الكريم أونلاين. نقدم برامج متخصصة للأطفال والكبار مع نخبة من المعلمين المعتمدين. ابدأ رحلتك مع القرآن اليوم." />
+    <meta name="keywords" content="تحفيظ القرآن, قرآن أونلاين, أكاديمية قرآن, دروس تجويد, تعليم القرآن للأطفال, أكاديمية غيث" />
+
+    <title>أكاديمية غيث</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/gaith - icon.png">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1254181292985620');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1254181292985620&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
+
+    <style>
+        :root {
+            --primary-color: #0a4f35;
+            --secondary-color: #f3a712;
+            --background-color: #fdfdfd;
+            --text-color: #333;
+            --light-gray: #f8f9fa;
+        }
+
+        body {
+            font-family: 'Cairo', sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+        }
+
+        /* --- Navbar --- */
+        .navbar {
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            padding: 0.75rem 0;
+        }
+        .navbar-brand {
+            color: var(--primary-color) !important;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+        }
+        .navbar-brand img {
+            height: 45px;
+            margin-left: 10px; /* Adjusted for RTL */
+        }
+
+        /* --- Hero Section --- */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('assets/hero.png') center center/cover no-repeat;
+            color: white;
+            text-align: center;
+            padding: 120px 20px;
+        }
+        .hero h1 {
+            font-size: 2.8rem;
+            font-weight: 800;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        .hero p {
+            font-size: 1.25rem;
+            margin-top: 15px;
+            margin-bottom: 30px;
+            max-width: 700px;
+            margin-right: auto;
+            margin-left: auto;
+        }
+
+        /* --- Buttons --- */
+        .btn-brand {
+            background-color: var(--secondary-color);
+            color: black;
+            font-size: 1.1rem;
+            padding: 12px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: all 0.3s ease;
+            border: 2px solid var(--secondary-color);
+        }
+        .btn-brand:hover {
+            background-color: transparent;
+            color: var(--secondary-color);
+            transform: translateY(-3px);
+        }
+        .btn-whatsapp-main {
+            background-color: #25D366;
+            color: white;
+        }
+         .btn-whatsapp-main:hover {
+            background-color: #1ebd56;
+            color: white;
+        }
+
+        /* --- Section Styling --- */
+        .section-title {
+            color: var(--primary-color);
+            font-weight: 800;
+            margin-bottom: 40px;
+            position: relative;
+            padding-bottom: 15px;
+        }
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 50%;
+            transform: translateX(50%);
+            width: 80px;
+            height: 4px;
+            background-color: var(--secondary-color);
+            border-radius: 2px;
+        }
+
+        /* --- Features Section --- */
+        .feature-item {
+            padding: 20px;
+        }
+        .feature-icon {
+            font-size: 3rem;
+            color: var(--secondary-color);
+            margin-bottom: 15px;
+            display: inline-block;
+        }
+        .feature-item h5 {
+            color: var(--primary-color);
+            font-weight: 700;
+            font-size: 1.3rem;
+        }
+
+        /* --- How It Works --- */
+        .how-it-works-step {
+            text-align: center;
+        }
+        .step-icon {
+            width: 90px;
+            height: 90px;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 15px;
+            font-size: 2.5rem;
+            box-shadow: 0 4px 15px rgba(10, 79, 53, 0.2);
+        }
+        .how-it-works-step h5 {
+             color: var(--primary-color);
+             font-weight: 700;
+        }
+
+
+        /* --- Pricing Section --- */
+        .pricing-card {
+            border: 1px solid #ddd;
+            border-radius: 15px;
+            padding: 30px 20px;
+            transition: all 0.3s ease;
+            background-color: white;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        .pricing-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        .pricing-card h5 {
+            font-weight: 700;
+            color: var(--primary-color);
+            font-size: 1.4rem;
+        }
+        .pricing-card .price {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--primary-color);
+            margin-bottom: 5px;
+        }
+        .pricing-card .price span {
+            font-size: 1rem;
+            font-weight: 400;
+        }
+        .price-old {
+            text-decoration: line-through;
+            color: #aaa;
+            font-size: 1rem;
+            margin-bottom: 20px;
+        }
+        .pricing-card ul {
+            flex-grow: 1;
+        }
+        .pricing-card ul li {
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            font-size: 1rem;
+        }
+        .pricing-card ul li .bi {
+            color: var(--primary-color);
+            margin-left: 8px;
+            font-size: 1.2rem;
+        }
+        .btn-price {
+             background-color: var(--primary-color);
+             color: white;
+             border-color: var(--primary-color);
+        }
+        .btn-price:hover {
+             background-color: #083b28;
+             color: white;
+        }
+        .popular-plan {
+            border: 2px solid var(--secondary-color);
+            position: relative;
+        }
+        .popular-badge {
+            position: absolute;
+            top: -15px;
+            right: 50%;
+            transform: translateX(50%);
+            background-color: var(--secondary-color);
+            color: black;
+            padding: 5px 15px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 0.9rem;
+        }
+        .popular-plan .btn-price {
+            background-color: var(--secondary-color);
+            color: black;
+            border-color: var(--secondary-color);
+        }
+         .popular-plan .btn-price:hover {
+            background-color: #e0980b;
+            color: black;
+        }
+        .pricing-sub-header {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        /* -- Offers Section -- */
+        .offers-section {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 50px 0;
+            text-align: center;
+        }
+        .offers-section h2 {
+            font-weight: 800;
+            color: var(--secondary-color);
+        }
+         .offers-section p {
+            max-width: 600px;
+            margin: 15px auto 30px;
+            font-size: 1.1rem;
+        }
+
+        /* --- Testimonials --- */
+        .testimonial-card {
+            background-color: var(--light-gray);
+            padding: 25px;
+            border-radius: 10px;
+            border-right: 5px solid var(--primary-color);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        .testimonial-card p {
+            flex-grow: 1;
+        }
+        .testimonial-card footer {
+            background: none;
+            padding: 0;
+            color: var(--primary-color);
+            font-weight: 700;
+            text-align: right;
+            margin-top: 15px;
+        }
+
+        /* --- FAQ --- */
+        .accordion-item {
+            border: 1px solid #e0e0e0;
+            border-radius: 8px !important;
+            margin-bottom: 1rem;
+            overflow: hidden;
+        }
+        .accordion-header {
+            font-weight: 700;
+        }
+        .accordion-button {
+            color: var(--text-color);
+            font-weight: 600;
+            background-color: #fff;
+        }
+        .accordion-button:not(.collapsed) {
+            color: var(--primary-color);
+            background-color: #f1f8f5;
+            box-shadow: none;
+        }
+        .accordion-button:focus {
+            box-shadow: none;
+            border-color: rgba(0,0,0,.125);
+        }
+        .accordion-button::after {
+            font-family: 'bootstrap-icons';
+            content: '\F4FE'; /* Plus icon */
+            transform: scale(1.2);
+        }
+        .accordion-button:not(.collapsed)::after {
+            content: '\F47A'; /* Minus icon */
+        }
+        
+        /* --- Floating WhatsApp --- */
+        .floating-whatsapp {
+            position: fixed;
+            bottom: 25px;
+            left: 25px;
+            z-index: 1000;
+        }
+        .floating-whatsapp a {
+            display: block;
+            width: 60px;
+            height: 60px;
+            background-color: #25D366;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            text-decoration: none;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease;
+        }
+        .floating-whatsapp a:hover {
+            transform: scale(1.1);
+        }
+
+        /* --- Footer --- */
+        footer {
+            background-color: var(--primary-color);
+            color: rgba(255, 255, 255, 0.8);
+            padding: 25px 0;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+        .social-icons {
+            margin-bottom: 15px;
+        }
+        .social-icons a {
+            color: white;
+            font-size: 1.5rem;
+            margin: 0 10px;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        .social-icons a:hover {
+            color: var(--secondary-color);
+        }
+    </style>
+
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="assets/gaith.png" alt="لوجو أكاديمية غيث">
+                أكاديمية غيث
+            </a>
+            <a class="btn btn-brand btn-whatsapp-main" href="https://api.whatsapp.com/send?phone=201040603123&text=السلام%20عليكم،%20أود%20الاستفسار%20عن%20خدمات%20أكاديمية%20غيث." target="_blank" rel="noopener noreferrer" onclick="fbq('track', 'Contact');">
+                <i class="bi bi-whatsapp me-2"></i>تواصل معنا
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="container">
+            <h1>ابدأ رحلتك المباركة مع القرآن الكريم</h1>
+            <p>حفظ مُتقن، تلاوة صحيحة، وفهم عميق. انضم لأكاديمية غيث وابدأ تعليمك على أيدي نخبة من المعلمين المتخصصين، من أي مكان في العالم.</p>
+            <a href="https://api.whatsapp.com/send?phone=201040603123&text=السلام%20عليكم،%20أود%20حجز%20الحلقة%20التجريبية%20المجانية." class="btn btn-brand" target="_blank" rel="noopener noreferrer" onclick="fbq('track', 'Lead', {content_name: 'حجز تجريبي مجاني'});">احجز حلقتك التجريبية المجانية</a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Features Section -->
+        <section class="py-5">
+            <div class="container text-center">
+                <h2 class="section-title">لماذا تختار أكاديمية غيث؟</h2>
+                <div class="row">
+                    <div class="col-md-4 mb-4">
+                        <div class="feature-item">
+                            <i class="bi bi-award feature-icon"></i>
+                            <h5>معلمون ومعلمات مجازون</h5>
+                            <p>فريق متميز من المعلمين والمعلمات المجازين في القراءات، يمتلكون خبرة واسعة في التعليم عن بعد.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                         <div class="feature-item">
+                            <i class="bi bi-people feature-icon"></i>
+                            <h5>لكل الأعمار والمستويات</h5>
+                            <p>نقدم برامج مخصصة تناسب جميع الفئات العمرية والمستويات، من الأطفال والمبتدئين إلى الكبار.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="feature-item">
+                            <i class="bi bi-card-checklist feature-icon"></i>
+                            <h5>متابعة وتقارير مستمرة</h5>
+                            <p>يتم إرسال تقرير مفصّل بعد كل حلقة لمتابعة مستوى الطالب ومدى تقدمه في الحفظ والتلاوة.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- How It Works Section -->
+        <section class="py-5 bg-light">
+            <div class="container">
+                <h2 class="section-title text-center">انضم إلينا في 3 خطوات بسيطة</h2>
+                <div class="row text-center mt-5">
+                    <div class="col-md-4 mb-4">
+                        <div class="how-it-works-step">
+                            <div class="step-icon"><i class="bi bi-whatsapp"></i></div>
+                            <h5>1. تواصل معنا</h5>
+                            <p>أرسل لنا رسالة عبر الواتساب للاستفسار وحجز حصتك التجريبية المجانية.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                         <div class="how-it-works-step">
+                             <div class="step-icon"><i class="bi bi-person-check"></i></div>
+                             <h5>2. تحديد المستوى</h5>
+                            <p>نقوم بعمل جلسة قصيرة لتحديد المستوى واختيار المنهج المناسب لك.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="how-it-works-step">
+                             <div class="step-icon"><i class="bi bi-calendar-check"></i></div>
+                             <h5>3. ابدأ الدراسة</h5>
+                            <p>ابدأ رحلتك التعليمية مباشرة في المواعيد التي تناسبك مع المعلم المناسب.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing Section -->
+        <section class="py-5">
+            <div class="container">
+                <h2 class="section-title text-center">اختر الباقة التي تناسبك</h2>
+                
+                <h3 class="pricing-sub-header">⏰ باقات الحلقات (30 دقيقة)</h3>
+                <div class="row justify-content-center mt-4">
+                    <!-- 30 min - 4 sessions -->
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="pricing-card">
+                            <h5>الباقة الشهرية</h5>
+                            <p class="price">200 <span>جنيه/شهر</span></p>
+                            <ul class="list-unstyled mb-4">
+                                <li><i class="bi bi-check-circle-fill"></i>4 حلقات شهريًا</li>
+                                <li><i class="bi bi-check-circle-fill"></i>تقرير مفصّل بعد كل حلقة</li>
+                                <li><i class="bi bi-check-circle-fill"></i>شهادة إتمام لكل جزء</li>
+                                <li><i class="bi bi-check-circle-fill"></i>دعم عبر الواتساب</li>
+                            </ul>
+                            <a href="https://api.whatsapp.com/send?phone=201040603123&text=السلام%20عليكم،%20أود%20الاشتراك%20في%20الباقة%20الشهرية%20(4%20حلقات%20-%2030%20دقيقة)." class="btn btn-brand btn-price d-block mt-auto" target="_blank" rel="noopener noreferrer" onclick="fbq('track', 'Lead', {content_name: 'الباقة الشهرية - 30 دقيقة'});">اشترك الآن</a>
+                        </div>
+                    </div>
+                    <!-- 30 min - 8 sessions (Popular) -->
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="pricing-card popular-plan">
+                            <div class="popular-badge">الأكثر شيوعًا</div>
+                            <h5>الباقة المتقدمة</h5>
+                            <p class="price">350 <span>جنيه/شهر</span></p>
+                            <ul class="list-unstyled mb-4">
+                                <li><i class="bi bi-check-circle-fill"></i>8 حلقات شهريًا</li>
+                                <li><i class="bi bi-check-circle-fill"></i>تقرير مفصّل بعد كل حلقة</li>
+                                <li><i class="bi bi-check-circle-fill"></i>شهادة إتمام لكل جزء</li>
+                                <li><i class="bi bi-check-circle-fill"></i>دعم عبر الواتساب</li>
+                            </ul>
+                            <a href="https://api.whatsapp.com/send?phone=201040603123&text=السلام%20عليكم،%20أود%20الاشتراك%20في%20الباقة%20المتقدمة%20(8%20حلقات%20-%2030%20دقيقة)." class="btn btn-brand btn-price d-block mt-auto" target="_blank" rel="noopener noreferrer" onclick="fbq('track', 'Lead', {content_name: 'الباقة المتقدمة - 30 دقيقة'});">اشترك الآن</a>
+                        </div>
+                    </div>
+                </div>
+
+                <h3 class="pricing-sub-header">⏰ باقات الحلقات (60 دقيقة)</h3>
+                 <div class="row justify-content-center mt-4">
+                    <!-- 60 min - 4 sessions -->
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="pricing-card">
+                            <h5>باقة التركيز</h5>
+                             <p class="price">350 <span>جنيه/شهر</span></p>
+                             <p class="price-old">بدلاً من 400 جنيه</p>
+                            <ul class="list-unstyled mb-4">
+                                <li><i class="bi bi-check-circle-fill"></i>4 حلقات شهريًا</li>
+                                <li><i class="bi bi-check-circle-fill"></i>تقرير مفصّل بعد كل حلقة</li>
+                                <li><i class="bi bi-check-circle-fill"></i>شهادة إتمام لكل جزء</li>
+                                <li><i class="bi bi-check-circle-fill"></i>دعم عبر الواتساب</li>
+                            </ul>
+                            <a href="https://api.whatsapp.com/send?phone=201040603123&text=السلام%20عليكم،%20أود%20الاشتراك%20في%20باقة%20التركيز%20(4%20حلقات%20-%2060%20دقيقة)." class="btn btn-brand btn-price d-block mt-auto" target="_blank" rel="noopener noreferrer" onclick="fbq('track', 'Lead', {content_name: 'باقة التركيز - 60 دقيقة'});">اشترك الآن</a>
+                        </div>
+                    </div>
+                    <!-- 60 min - 8 sessions -->
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="pricing-card">
+                            <h5>الباقة المكثفة</h5>
+                            <p class="price">550 <span>جنيه/شهر</span></p>
+                            <p class="price-old">بدلاً من 600 جنيه</p>
+                            <ul class="list-unstyled mb-4">
+                                <li><i class="bi bi-check-circle-fill"></i>8 حلقات شهريًا</li>
+                                <li><i class="bi bi-check-circle-fill"></i>تقرير مفصّل بعد كل حلقة</li>
+                                <li><i class="bi bi-check-circle-fill"></i>شهادة إتمام لكل جزء</li>
+                                <li><i class="bi bi-check-circle-fill"></i>دعم عبر الواتساب</li>
+                            </ul>
+                            <a href="https://api.whatsapp.com/send?phone=201040603123&text=السلام%20عليكم،%20أود%20الاشتراك%20في%20الباقة%20المكثفة%20(8%20حلقات%20-%2060%20دقيقة)." class="btn btn-brand btn-price d-block mt-auto" target="_blank" rel="noopener noreferrer" onclick="fbq('track', 'Lead', {content_name: 'الباقة المكثفة - 60 دقيقة'});">اشترك الآن</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Offers Section -->
+        <section class="offers-section">
+            <div class="container">
+                <h2>🎁 حلقة تجريبية مجانية وعروض خاصة!</h2>
+                <p>لا تفوت فرصة الحصول على أول حلقة تجريبية مجانًا بالكامل! كما نقدم عروضًا خاصة عند تسجيل الأصدقاء أو الأخوات معًا. تواصل معنا لمعرفة التفاصيل.</p>
+                 <a href="https://api.whatsapp.com/send?phone=201040603123&text=السلام%20عليكم،%20أود%20الاستفسار%20عن%20العروض%20الخاصة." class="btn btn-brand" target="_blank" rel="noopener noreferrer" onclick="fbq('track', 'Lead', {content_name: 'استفسار عن العروض'});">
+                    <i class="bi bi-whatsapp me-2"></i>استفسر عن العروض
+                </a>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="bg-light py-5">
+            <div class="container">
+                <h2 class="section-title text-center">ماذا قالوا عنّا؟</h2>
+                <div class="row mt-5">
+                    <div class="col-md-6 mb-4">
+                        <div class="testimonial-card">
+                            <p class="mb-3">"بصراحة النظام كويس وتقييمي ليها ١٠/١٠. المعلمة بتعمل مجهود كويس عشان توصلنا كل اللي بنحتاجه وبتسألنا كل مرة ومهتمة. بالتوفيق دايماً وعند حسن الظن."</p>
+                            <footer class="blockquote-footer">ولي أمر</footer>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="testimonial-card">
+                            <p class="mb-3">"المواعيد ما شاء الله مظبوطة جداً وبتهتموا لو الطالب محضرش وبتتابعوا. عندكم مرونة في التأجيل أو تغيير الموعد في حال وجود ظرف، والمعلمة لطيفة جداً."</p>
+                            <footer class="blockquote-footer">أم عبد الله</footer>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="testimonial-card">
+                            <p class="mb-3">"الأستاذة شيماء من أحسن الناس وأشطرها. عندها ضمير جداً في إنها تبذل مجهود عشان الطالب ينطق صح وممكن عشان الوقت بيخلص تفضل معاه شوية من وقتها. أستاذة شيماء بهيجة أوي."</p>
+                            <footer class="blockquote-footer">طالبة بالأكاديمية</footer>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="testimonial-card">
+                            <p class="mb-3">"دكتورة أسماء ربنا يجازيها كل خير، أنا بستنى الحلقة من الأسبوع للأسبوع. أسلوبها جميل وسلس في الشرح وتلاوة القرآن. ربنا يبارك فيها ويحفظها، الأكاديمية كلها منظمة."</p>
+                            <footer class="blockquote-footer">طالب بالأكاديمية</footer>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="py-5">
+            <div class="container">
+                <h2 class="section-title text-center">أسئلة شائعة</h2>
+                <div class="row justify-content-center mt-5">
+                    <div class="col-md-8">
+                        <div class="accordion" id="faqAccordion">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingOne">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        هل يمكن التسجيل للأطفال الصغار؟
+                                    </button>
+                                </h2>
+                                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        نعم، لدينا برامج متخصصة ومناهج مبسطة للأطفال من سن 4 سنوات فما فوق، تعتمد على التفاعل والأساليب التربوية الحديثة.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingTwo">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        كيف تتم الحصص الدراسية؟
+                                    </button>
+                                </h2>
+                                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        تتم الحصص بشكل مباشر (أونلاين) عبر برامج مثل زووم أو جوجل ميت، وتكون الحصة فردية بين الطالب والمعلم لضمان أقصى استفادة.
+                                    </div>
+                                </div>
+                            </div>
+                             <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingThree">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                        هل يوجد معلمات متخصصات للسيدات والفتيات؟
+                                    </button>
+                                </h2>
+                                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        نعم بالتأكيد، نوفر معلمات مجازات ومتخصصات لتعليم السيدات والفتيات مع الحفاظ على الخصوصية التامة.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Floating WhatsApp -->
+    <div class="floating-whatsapp">
+        <a href="https://api.whatsapp.com/send?phone=201040603123&text=السلام%20عليكم،%20أود%20الاستفسار%20عن%20خدمات%20أكاديمية%20غيث." target="_blank" rel="noopener noreferrer" aria-label="تواصل معنا عبر واتساب">
+            <i class="bi bi-whatsapp"></i>
+        </a>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="social-icons">
+                <a href="https://www.facebook.com/GhaithAcademyEgy" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                <a href="https://www.instagram.com/ghaithacademy1/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            </div>
+            &copy; 2025 أكاديمية غيث لتحفيظ القرآن الكريم - جميع الحقوق محفوظة
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
